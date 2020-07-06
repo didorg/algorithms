@@ -1,10 +1,10 @@
 package sort;
 
-import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.assertArrayEquals;
+import org.junit.jupiter.api.Test;
 
 /**
  * It’s important to remember that Quicksort isn’t a stable algorithms
