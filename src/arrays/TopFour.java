@@ -16,7 +16,7 @@ public class TopFour {
 
     int[] topFour = Arrays.copyOfRange(arr, arr.length-4, arr.length);
     /*** @return a new array containing the specified range from the original array */
-    int[] lowerFour = Arrays.copyOfRange(arr, 0,4);
+    //int[] lowerFour = Arrays.copyOfRange(arr, 0,4);
 
     return topFour;
   }
