@@ -24,5 +24,18 @@ public class DataTypes {
         char nameInitial = 'A';
 
         System.out.println("The initial Name is "+nameInitial+"\nThe short is "+theShort + "\nThe int is "+theInt);
+
+
+        /** Non primitive data types AKA Reference types */
+        // All of the variables provided by Java (other than the eight primitive variables mentioned above) are reference type
+        Person first = new Person("Adam");
+        System.out.println(first);
+
+        /**
+         * The value of a primitive variable is concrete, whereas the value of a reference variable is a reference
+         * - primitive variable causes the computer to reserve some memory where the value assigned to the variable can be stored
+         * - any object instanced from a class is a reference variable
+         * **/
+
     }
 }
