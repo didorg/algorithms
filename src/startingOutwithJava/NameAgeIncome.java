@@ -18,9 +18,9 @@ public class NameAgeIncome {
 	public static void main(String[] args) {
 		String name = "Adam";
 		int age = 24;
-		double annualpay = 150000;
+		double annualPay = 150000;
 		
-		System.out.println("My name is "+ name + ", my age is " + age + " and \n I hope to earn $"+ annualpay +" per year.");
+		System.out.println("My name is "+ name + ", my age is " + age + " and \n I hope to earn $"+ annualPay +" per year.");
 	}
 
 }
