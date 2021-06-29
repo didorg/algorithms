@@ -42,3 +42,4 @@ target/*
 mvnw.cmd
 mvnw
 output/production/algorithms/META-INF/algorithms.kotlin_module
+.DS_Store
