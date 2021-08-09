@@ -15,6 +15,7 @@ public class Factorial {
     }
 
     // Factorial with a FOR loop
+    // 1
     public static long factorialForLoopOne(int num) {
         if (num < 0) return -1;
         if (num == 0 || num == 1) return 1;
@@ -24,9 +25,10 @@ public class Factorial {
         return num;
     }
 
+    // Factorial with a FOR loop
+    // 2
     public static long factorialForLoopTwo(int num) {
         if (num < 0) return -1;
-        if (num == 0 || num == 1) return 1;
         int result = 1;
         for (int i = 1; i <= num; i++) {
             result *= i;
@@ -37,25 +39,17 @@ public class Factorial {
 
     @Test
     public void factorialRecursionTest() {
+        //long expected = (-5)-1; (0)1; (1)1; (5)120;
         int num = 10;
         long expected = 3628800;
-        long result = factorialRecursion(num);
-        Assertions.assertEquals(expected, result);
+
+        long result1 = factorialRecursion(num);
+        long result2 = factorialForLoopOne(num);
+        long result3 = factorialForLoopTwo(num);
+
+        Assertions.assertEquals(expected, result1);
+        Assertions.assertEquals(expected, result2);
+        Assertions.assertEquals(expected, result3);
     }
 
-    @Test
-    public void factorialForLoopOneTest() {
-        int num = 10;
-        long expected = 3628800;
-        long result = factorialForLoopOne(num);
-        Assertions.assertEquals(expected, result);
-    }
-
-    @Test
-    public void factorialForLoopTwoTest() {
-        int num = 10;
-        long expected = 3628800;
-        long result = factorialForLoopTwo(num);
-        Assertions.assertEquals(expected, result);
-    }
 }
