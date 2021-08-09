@@ -6,20 +6,25 @@ public class DataTypes {
         /** Primitive data types **/
         // 1 byte;
         byte theByte = -128;
+
         // 2 bytes;
         short theShort = 8_989;
+
         // 4 bytes;
         int theInt = 789_542_554;
-        // 8 bytes;
-        long theLong = 54845454L;
 
         // 4 bytes;
         float pi = 3.14F;
+
         // 8 bytes;
         double piDouble = 3.14;
 
+        // 8 bytes;
+        long theLong = 54845454L;
+
         //1 bit;
         boolean isAdult = true;
+
         // 2 bytes
         char nameInitial = 'A';
 
@@ -27,9 +32,9 @@ public class DataTypes {
 
 
         /** Non primitive data types AKA Reference types */
-        // All of the variables provided by Java (other than the eight primitive variables mentioned above) are reference type
-        Person first = new Person("Adam");
-        System.out.println(first);
+        // All the variables provided by Java (other than the eight primitive variables mentioned above) are reference type
+        String name = "Adam";
+        System.out.println(name);
 
         /**
          * The value of a primitive variable is concrete, whereas the value of a reference variable is a reference
