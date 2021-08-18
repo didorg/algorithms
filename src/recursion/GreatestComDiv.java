@@ -1,7 +1,7 @@
 package recursion;
 
-// Greatest Common Divisor 
-public class GCommDiv {
+// Greatest Common Divisor
+public class GreatestComDiv {
     public static void main(String[] args) {
         System.out.println(gcd(8, 12));
     }
