@@ -5,52 +5,46 @@ public class LinkedList<T> {
     int size;
 
     public LinkedList() {
-        head = new Node();
-        size = 0;
+        this.head = null;
     }
 
-    public void setSize(int s) {
-        this.size = s;
+    public void addFirst(T data) {
+        Node node = new Node();
+        node.data = data;
+        node.next = head;
+        head = node;
+        size++;
+    }
+
+    public void addLast(T data) {
+        if (this.head == null) addFirst(data);
+        else {
+            Node node = new Node();
+            node.data = data;
+            node.next = null;
+            Node tmp = head;
+            while (tmp.next != null) {
+                tmp = tmp.next;
+            }
+            tmp.next = node;
+            size++;
+        }
     }
 
     public int getSize() {
-        return this.size;
+        return size;
     }
 
-    public Node add(T data) {
-        Node newNode = new Node(data, head);
-        this.head = newNode;
-        this.size++;
-        return newNode;
-    }
-
-    public Node find(T data) {
-        Node thisNode = this.head;
-
-        while (thisNode != null) {
-            if (thisNode.getData() == data)
-                return thisNode;
-            thisNode = thisNode.getNext();
-        }
-        return null;
-    }
-
-    public boolean remove(T data) {
-        Node thisNode = this.head;
-        Node prevNode = null;
-
-        while (thisNode != null) {
-            if (thisNode.getData() == data) {
-                if (prevNode != null)
-                    prevNode.setNext(thisNode.getNext());
-                else
-                    this.head = null;
-                this.setSize(this.getSize() - 1);
-                return true;
+    public void printLinkedList() {
+        if (this.size == 0) {
+            System.out.println("LinkedList is Empty");
+        } else {
+            Node tmp = head;
+            while (tmp.next != null) {
+                System.out.print(tmp.data +" -> ");
+                tmp = tmp.next;
             }
-            prevNode = thisNode;
-            thisNode = thisNode.getNext();
+            System.out.print(tmp.data.toString());
         }
-        return false;
     }
 }
