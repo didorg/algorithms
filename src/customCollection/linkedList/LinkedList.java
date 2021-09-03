@@ -8,6 +8,10 @@ public class LinkedList<T> {
         this.head = null;
     }
 
+    public int getSize() {
+        return size;
+    }
+
     public void addFirst(T data) {
         Node node = new Node();
         node.data = data;
@@ -31,17 +35,13 @@ public class LinkedList<T> {
         }
     }
 
-    public int getSize() {
-        return size;
-    }
-
     public void printLinkedList() {
         if (this.size == 0) {
             System.out.println("LinkedList is Empty");
         } else {
             Node tmp = head;
             while (tmp.next != null) {
-                System.out.print(tmp.data +" -> ");
+                System.out.print(tmp.data + " -> ");
                 tmp = tmp.next;
             }
             System.out.print(tmp.data.toString());
